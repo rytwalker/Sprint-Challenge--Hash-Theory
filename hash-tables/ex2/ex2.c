@@ -36,6 +36,14 @@ void print_route(char **route, int length)
   {
     printf("%s\n", route[i]);
   }
+
+  // free route array
+  for (int i = 0; i < length; i++)
+  {
+    free(route[i]);
+  }
+
+  free(route);
 }
 
 #ifndef TESTING
